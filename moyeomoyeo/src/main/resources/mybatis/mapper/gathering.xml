@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sjm.moyeomoyeo.gathering.dao.IGatheringDAO">
+
+	<!-- 모임 생성 -->
+	<insert id="makeGathering" parameterType="com.sjm.moyeomoyeo.gathering.dto.GatheringDTO">
+		INSERT INTO gathering(
+		    gather_code,
+		    gather_name,
+		    del_yn
+		) VALUES (
+		    #{gatherCode},
+		    #{gatherName},
+		    'N'
+		)
+	</insert>
+	
+	<!-- 파라미터의 코드 값의 모임명 -->
+	<select id="getGatheringName" parameterType="String" resultType="com.sjm.moyeomoyeo.gathering.dto.GatheringDTO">
+		SELECT
+		    gather_code,
+		    gather_name,
+		    del_yn
+		FROM gathering
+		WHERE 1=1
+			AND gather_code = #{gatherCode}
+	</select>
+</mapper>

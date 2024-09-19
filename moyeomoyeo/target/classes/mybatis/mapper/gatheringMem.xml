@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sjm.moyeomoyeo.gatheringMem.dao.IGatheringMemDAO">
+
+	<insert id="addGatheringMem" parameterType="com.sjm.moyeomoyeo.gatheringMem.dto.GatheringMemDTO">
+		INSERT INTO gathering_mem(
+			mem_id,
+		    gather_code,
+			gather_name,
+			gather_nick,
+			del_yn,
+		    header_yn
+		) VALUES (
+		    #{memId},
+		    #{gatherCode},
+		    #{gatherName},
+		    #{gatherNick},
+		    'N',
+		    #{headerYn}
+		)
+	</insert>
+	
+	<select id="selectGatheringMem" parameterType="String" resultType="com.sjm.moyeomoyeo.gatheringMem.dto.GatheringMemDTO">
+		SELECT
+			mem_id,
+		    gather_code,
+			gather_name,
+			gather_nick,
+			del_yn,
+		    header_yn
+		FROM gathering_mem
+		WHERE 1=1
+		    AND mem_id = #{memId}
+		    AND del_yn = 'N'
+	</select>
+	
+	<select id="getGatheringMem" parameterType="map" resultType="com.sjm.moyeomoyeo.gatheringMem.dto.GatheringMemDTO">
+		SELECT
+			mem_id,
+		    gather_code,
+			gather_name,
+			gather_nick,
+			del_yn,
+		    header_yn
+		FROM gathering_mem
+		WHERE 1=1
+		    AND mem_id = #{memId}
+		    AND gather_code = #{gatherCode}
+		    AND del_yn = 'N'
+	</select>
+
+</mapper>

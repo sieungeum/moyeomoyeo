@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sjm.moyeomoyeo.gallery.dao.IGalleryDAO">
+	<insert id="writeGallery" parameterType="com.sjm.moyeomoyeo.gallery.dto.GalleryDTO">
+		INSERT INTO gallery(
+			gather_code,
+			mem_id,
+			gel_no,
+			gel_title,
+			gel_content,
+			gel_date,
+			del_yn
+		) VALUES (
+		    #{gatherCode},
+		    #{memId},
+		    seq_gallery.NEXTVAL,
+		    #{gelTitle},
+		    #{gelContent},
+		    SYSDATE,
+		    'N'
+		)
+	</insert>
+</mapper>
