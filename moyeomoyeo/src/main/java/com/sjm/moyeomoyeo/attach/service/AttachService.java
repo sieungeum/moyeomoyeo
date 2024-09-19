@@ -23,8 +23,8 @@ public class AttachService {
 		return result;
 	}
 
-	public List getAttachList(int no) {
-		List result = dao.getAttachList(no);
+	public List<AttachDTO> getAttachList(int atchParentNo, String gatherCode) {
+		List<AttachDTO> result = dao.getAttachList(atchParentNo, gatherCode);
 		return result;
 	}
 }

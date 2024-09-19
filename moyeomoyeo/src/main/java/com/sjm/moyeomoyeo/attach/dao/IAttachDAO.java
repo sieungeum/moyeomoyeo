@@ -9,11 +9,12 @@ import com.sjm.moyeomoyeo.attach.dto.AttachDTO;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 @Mapper
 public interface IAttachDAO {
 
-	public abstract int insertAttach(AttachDTO attachdto);
+	int insertAttach(AttachDTO attach);
 
-	public abstract List getAttachList(int i);
+	List<AttachDTO> getAttachList(@Param("atchParentNo")int atchParentNo, @Param("gatherCode")String gatherCode);
 }

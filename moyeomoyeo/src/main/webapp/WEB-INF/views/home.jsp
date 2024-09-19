@@ -48,12 +48,12 @@
             </div>
         </header>
         
-        <!-- Services(간단한 가이드 느낌으로 만들어야쥐 -->
+        <!-- Services -->
         <section class="page-section" id="services">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Services</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading text-uppercase">가이드</h2>
+                    <h3 class="section-subheading text-muted"></h3>
                 </div>
                 <div class="row text-center">
                     <div class="col-md-4">
@@ -61,24 +61,24 @@
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">E-Commerce</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        <h4 class="my-3">갤러리</h4>
+                        <p class="text-muted">여러분의 추억을 모임원들과 공유해보세요!<br>사진과 간단한 설명을 적어 올려주세요!</p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Responsive Design</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        <h4 class="my-3">일정</h4>
+                        <p class="text-muted">모임 가능한 날짜을 정해봐요!<br>모임 가능한 날을 체크해서 일정을 잡아봐요!</p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Web Security</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        <h4 class="my-3">추천 명소</h4>
+                        <p class="text-muted">같이 가보고 싶은 명소나 맛집을 공유해요!<br>나중에 장소 정할 때 수월할 수 있어요!</p>
                     </div>
                 </div>
             </div>

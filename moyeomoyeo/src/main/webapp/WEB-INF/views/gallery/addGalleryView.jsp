@@ -28,7 +28,8 @@
 				<h2 class="section-heading text-uppercase">갤러리 추가</h2>
 			</div>
 			
-			<form id="contactForm" action="${pageContext.request.contextPath}/addGalleryDO" method="POST">
+			<form id="contactForm" action="${pageContext.request.contextPath}/addGalleryDO"
+					 method="POST" enctype="multipart/form-data" >
 				<div class="row align-items-stretch mb-5">
 					<div class="col-7 m-auto">
 						<div class="form-group">
@@ -43,7 +44,10 @@
 						</div>
 						
 						<!-- 파일 첨부 div 추가 -->
-						
+						<div class="mb-3">
+							<label for="formFileMultiple" class="form-label">사진 첨부</label>
+							<input class="form-control" type="file" id="formFileMultiple" name="boFile" multiple>
+						</div>
 					</div>
 				</div>
 				

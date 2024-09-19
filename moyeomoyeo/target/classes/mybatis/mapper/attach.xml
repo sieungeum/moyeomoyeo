@@ -6,6 +6,7 @@
 		INSERT INTO attach(
 		    atch_no,
 		    atch_parent_no,
+		    gather_code,
 		    atch_file_name,
 		    atch_orgin_name,
 		    atch_file_size,
@@ -15,6 +16,7 @@
 		) VALUES (
 		    seq_attach.NEXTVAL,
 		    #{atchParentNo},
+		    #{gatherCode},
 		    #{atchFileName},
 		    #{atchOrginName},
 		    #{atchFileSize},
@@ -24,10 +26,11 @@
 		)
 	</insert>
 	
-	<select id="getAttachList" parameterType="int" resultType="com.sjm.moyeomoyeo.attach.dto.AttachDTO">
+	<select id="getAttachList" parameterType="map" resultType="com.sjm.moyeomoyeo.attach.dto.AttachDTO">
 		SELECT
 		    atch_no,
 		    atch_parent_no,
+		    gather_code,
 		    atch_file_name,
 		    atch_orgin_name,
 		    atch_file_size,
@@ -36,7 +39,8 @@
 		    atch_path
 		FROM attach
 		WHERE 1=1
-		    AND atch_parent_no = #{no}
+		    AND atch_parent_no = #{atchParentNo}
+		    AND gather_code = #{gatherCode}
 	</select>
 	
 </mapper>

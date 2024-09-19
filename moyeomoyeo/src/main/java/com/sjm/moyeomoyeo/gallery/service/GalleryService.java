@@ -5,6 +5,8 @@
 
 package com.sjm.moyeomoyeo.gallery.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +21,16 @@ public class GalleryService {
 
 	public int writeGallery(GalleryDTO gallery) {
 		int result = dao.writeGallery(gallery);
+		return result;
+	}
+	
+	public int getGalleryNo() {
+		int result = dao.getGalleryNo();
+		return result;
+	}
+	
+	public List<GalleryDTO> getGallery(String gatherCode){
+		List<GalleryDTO> result = dao.getGallery(gatherCode);
 		return result;
 	}
 }

@@ -8,35 +8,36 @@ package com.sjm.moyeomoyeo.attach.dto;
 public class AttachDTO {
 	private int atchNo;
 	private int atchParentNo;
+	private String gatherCode;
 	private String atchFileName;
 	private String atchOrginName;
 	private long atchFileSize;
 	private String atchFancySize;
-	private String atchContetntType;
+	private String atchContentType;
 	private String atchPath;
+	
+	public AttachDTO() {
+	}
 
-	public AttachDTO(int atchNo, int atchParentNo, String atchFileName, String atchOrginName, long atchFileSize,
-			String atchFancySize, String atchContetntType, String atchPath) {
-		super();
+	public AttachDTO(int atchNo, int atchParentNo, String gatherCode, String atchFileName, String atchOrginName,
+			long atchFileSize, String atchFancySize, String atchContentType, String atchPath) {
 		this.atchNo = atchNo;
 		this.atchParentNo = atchParentNo;
+		this.gatherCode = gatherCode;
 		this.atchFileName = atchFileName;
 		this.atchOrginName = atchOrginName;
 		this.atchFileSize = atchFileSize;
 		this.atchFancySize = atchFancySize;
-		this.atchContetntType = atchContetntType;
+		this.atchContentType = atchContentType;
 		this.atchPath = atchPath;
-	}
-
-	public AttachDTO() {
-		super();
 	}
 
 	@Override
 	public String toString() {
-		return "AttachDTO [atchNo=" + atchNo + ", atchParentNo=" + atchParentNo + ", atchFileName=" + atchFileName
-				+ ", atchOrginName=" + atchOrginName + ", atchFileSize=" + atchFileSize + ", atchFancySize="
-				+ atchFancySize + ", atchContetntType=" + atchContetntType + ", atchPath=" + atchPath + "]";
+		return "AttachDTO [atchNo=" + atchNo + ", atchParentNo=" + atchParentNo + ", gatherCode=" + gatherCode
+				+ ", atchFileName=" + atchFileName + ", atchOrginName=" + atchOrginName + ", atchFileSize="
+				+ atchFileSize + ", atchFancySize=" + atchFancySize + ", atchContentType=" + atchContentType
+				+ ", atchPath=" + atchPath + "]";
 	}
 
 	public int getAtchNo() {
@@ -53,6 +54,14 @@ public class AttachDTO {
 
 	public void setAtchParentNo(int atchParentNo) {
 		this.atchParentNo = atchParentNo;
+	}
+
+	public String getGatherCode() {
+		return gatherCode;
+	}
+
+	public void setGatherCode(String gatherCode) {
+		this.gatherCode = gatherCode;
 	}
 
 	public String getAtchFileName() {
@@ -87,12 +96,12 @@ public class AttachDTO {
 		this.atchFancySize = atchFancySize;
 	}
 
-	public String getAtchContetntType() {
-		return atchContetntType;
+	public String getAtchContentType() {
+		return atchContentType;
 	}
 
-	public void setAtchContetntType(String atchContetntType) {
-		this.atchContetntType = atchContetntType;
+	public void setAtchContentType(String atchContentType) {
+		this.atchContentType = atchContentType;
 	}
 
 	public String getAtchPath() {
@@ -102,5 +111,5 @@ public class AttachDTO {
 	public void setAtchPath(String atchPath) {
 		this.atchPath = atchPath;
 	}
-
+	
 }

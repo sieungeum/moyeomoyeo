@@ -20,4 +20,27 @@
 		    'N'
 		)
 	</insert>
+	
+	<!-- 첨부파일을 포함한 게시글 저장 시 생성될 게시글의 boardNo를 미리 확인 -->
+	<select id="getGalleryNo" resultType="int">
+		SELECT
+		    COUNT(*) + 1
+		FROM gallery
+	</select>
+	
+	<!-- 모임 코드와 일치하는 갤러리 다 가져오기 -->
+	<select id="getGallery" parameterType="String" resultType="com.sjm.moyeomoyeo.gallery.dto.GalleryDTO">
+		SELECT
+			gather_code,
+			mem_id,
+			gel_no,
+			gel_title,
+			gel_content,
+			gel_date,
+			del_yn
+		FROM gallery
+		WHERE 1=1
+		    AND gather_code = #{gatherCode}
+		    AND del_yn = 'N'
+	</select>
 </mapper>

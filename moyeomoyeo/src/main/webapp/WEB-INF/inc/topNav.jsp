@@ -18,7 +18,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
             	<!-- 로그인 되어있는 경우 -->
-                <c:if test="${sessionScope.login.memId != null }">
+                <c:if test="${sessionScope.login != null}">
                 
                 	<!-- dropdowm -->
                 	<li class="nav-item dropdown">
@@ -55,7 +55,7 @@
                 </c:if>
                 
                 <!-- 비로그인 시 -->
-                <c:if test="${sessionScope.login.memId == null }">
+                <c:if test="${sessionScope.login == null }">
                 	<li class="nav-item"><a class="nav-link" style="color: white; " href="#services">가이드</a></li>
 	                <li class="nav-item"><a class="nav-link" style="color: white; " href="${pageContext.request.contextPath}/signInView">로그인</a></li>
                 </c:if>

@@ -5,6 +5,8 @@
 
 package com.sjm.moyeomoyeo.gallery.dao;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
 
 import com.sjm.moyeomoyeo.gallery.dto.GalleryDTO;
@@ -12,5 +14,12 @@ import com.sjm.moyeomoyeo.gallery.dto.GalleryDTO;
 @Mapper
 public interface IGalleryDAO {
 
-	public abstract int writeGallery(GalleryDTO gallerydto);
+	// gallery 추가 (INSERT)
+	public abstract int writeGallery(GalleryDTO gallery);
+	
+	// 갤러리 추가 시 attach의 parent no 에 추가할 no
+	int getGalleryNo();
+	
+	// 갤러리 가져오기 (SELECT)
+	List<GalleryDTO> getGallery(String gatherCode);
 }

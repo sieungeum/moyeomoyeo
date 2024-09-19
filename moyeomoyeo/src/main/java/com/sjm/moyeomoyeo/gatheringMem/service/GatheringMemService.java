@@ -5,6 +5,7 @@
 
 package com.sjm.moyeomoyeo.gatheringMem.service;
 
+import com.sjm.moyeomoyeo.gathering.dto.GatheringDTO;
 import com.sjm.moyeomoyeo.gatheringMem.dao.IGatheringMemDAO;
 import com.sjm.moyeomoyeo.gatheringMem.dto.GatheringMemDTO;
 import java.util.List;
@@ -18,13 +19,15 @@ public class GatheringMemService {
 	@Autowired
 	IGatheringMemDAO dao;
 
+	// 모임 가입 시 모임에 가입된 회원 정보 DB에 저장(INSERT)
 	public int addGatheringMem(GatheringMemDTO gMem) {
 		int result = dao.addGatheringMem(gMem);
 		return result;
 	}
 
-	public List selectGatheringMem(String memId) {
-		List result = dao.selectGatheringMem(memId);
+	// 파라미터의 ID가 가입된 모임들 리스트로 가져오기(SELECT)
+	public List<GatheringMemDTO> selectGatheringMem(String memId) {
+		List<GatheringMemDTO> result = dao.selectGatheringMem(memId);
 		return result;
 	}
 
